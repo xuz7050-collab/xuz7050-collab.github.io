@@ -1,65 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>品牌合作介绍</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开云体育合营代理招商</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Microsoft YaHei",Arial,sans-serif;
+  background:linear-gradient(180deg,#ffffff 0%,#f6fbff 55%,#ffffff 100%);
+  color:#123456;
+}
+
+.page{
+  min-height:100vh;
+  padding:10px 30px 30px;
+}
+
+.header{
+  height:48px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.user-link{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.avatar{
+  width:28px;
+  height:28px;
+  overflow:hidden;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.badge{
+  background:#2f96dd;
+  color:#fff;
+  padding:7px 14px;
+  border-radius:18px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.nav a{
+  color:#1265ad;
+  text-decoration:none;
+  font-weight:bold;
+  margin-left:18px;
+}
+
+.hero{
+  text-align:center;
+  padding:25px 0 30px;
+}
+
+.hero h1{
+  font-size:36px;
+  color:#6ca7df;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:16px;
+  margin-bottom:18px;
+}
+
+.notice{
+  max-width:1100px;
+  margin:0 auto 20px;
+  background:#fff;
+  border:1px solid #e2edf7;
+  border-radius:20px;
+  padding:14px 25px;
+  box-shadow:0 18px 45px rgba(29,91,150,.08);
+}
+
+.platform-icons{
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  align-items:center;
+  justify-items:center;
+  gap:15px;
+}
+
+.platform-item{
+  width:110px;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.platform-item img{
+  width:105px;
+  height:55px;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));
+  transition:.3s;
+}
+
+.platform-item img:hover{
+  transform:scale(1.08);
+}
+
+.cards{
+  max-width:1070px;
+  margin:20px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #dfeaf5;
+  border-radius:22px;
+  padding:22px 18px 30px;
+  box-shadow:0 26px 55px rgba(24,73,120,.12);
+}
+
+.card h2{
+  font-size:20px;
+  color:#1767b2;
+  margin-bottom:14px;
+}
+
+.item-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+.item{
+  height:44px;
+  border:1px solid #e4edf6;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 16px;
+  margin-bottom:8px;
+  background:#fff;
+  font-weight:bold;
+}
+
+.check{
+  color:#209ae8;
+  margin-right:8px;
+}
+
+.arrow{
+  color:#7aa6ca;
+  font-size:22px;
+}
+
+.green-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  padding:13px 30px;
+  background:linear-gradient(135deg,#28b94e,#178938);
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.footer{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.tag{
+  background:#1f9b42;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+@media(max-width:768px){
+  .page{
+    padding:10px 14px 24px;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .platform-icons{
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+
+  .platform-item{
+    width:100%;
+    height:65px;
+  }
+
+  .platform-item img{
+    width:95px;
+    height:50px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+}
+.item-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}</style>
 </head>
+
 <body>
-<header class="header"><div class="container nav">
-<a class="logo" href="#home">YOUR<span>·</span>BRAND</a>
-<nav><a href="#home">首页</a><a href="#about">关于我们</a><a href="#services">服务</a><a href="#process">合作流程</a><a href="#contact">联系我们</a></nav>
-<a class="nav-btn" href="#contact">立即咨询</a>
-</div></header>
 
-<main>
-<section id="home" class="hero"><div class="hero-bg"></div><div class="container hero-inner">
-<div class="hero-copy">
-<div class="eyebrow">PROFESSIONAL · DIGITAL · SERVICE</div>
-<h1>品牌合作<br><span>专业服务，更有价值。</span></h1>
-<p>专注于数字产品与线上服务，为合作伙伴提供清晰、高效、专业的解决方案。</p>
-<div class="actions"><a class="btn primary" href="#contact">立即了解</a><a class="btn secondary" href="#services">查看服务</a></div>
+<div class="page">
+
+  <header class="header">
+    <a href="https://t.me/mlzsatm" target="_blank" class="user-link">
+      <div class="user">
+        <div class="avatar">
+          <img src="xintu/telegram.png" alt="头像">
+        </div>
+        <div class="badge">招商总监 · 阿童木</div>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#">首页</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>开云体育合营代理招商与系统对接</h1>
+    <p>稳定对接 · 流程清晰 · 扶持到位</p>
+  </section>
+
+  <div class="notice">
+    <div class="platform-icons">
+      <div class="platform-item"><img src="xintu/kaiyun-new.png" alt="开云"></div>
+      <div class="platform-item"><img src="xintu/aiyouxi.png" alt="爱游戏"></div>
+      <div class="platform-item"><img src="xintu/huatihui.PNG" alt="华体会"></div>
+      <div class="platform-item"><img src="xintu/leyu.png" alt="乐鱼"></div>
+      <div class="platform-item"><img src="xintu/milan.png" alt="米兰"></div>
+      <div class="platform-item"><img src="xintu/xingkong.png" alt="星空"></div>
+      <div class="platform-item"><img src="xintu/od.png" alt="OD"></div>
+      <div class="platform-item"><img src="xintu/jiuyou.png" alt="九游"></div>
+      <div class="platform-item"><img src="xintu/mk.png" alt="MK"></div>
+    </div>
+  </div>
+
+  <section class="cards">
+
+    <div class="card">
+      <h2>☷ 流程与政策</h2>
+
+      <a href="huodong.html" class="item-link">
+        <div class="item">
+          <div><span class="check">✓</span>合营招商活动图（每月实时更新）</div>
+          <div class="arrow">›</div>
+        </div>
+      </a>
+
+      <a href="xiaxian.html" class="item-link">
+        <div class="item">
+          <div><span class="check">✓</span>代理如何发展线下会员</div>
+          <div class="arrow">›</div>
+        </div>
+      </a>
+
+      <a href="qudao.html" class="item-link">
+        <div class="item">
+          <div><span class="check">✓</span>代理渠道费扶持</div>
+          <div class="arrow">›</div>
+        </div>
+      </a>
+
+      <a href="register.html" class="green-btn">➜ 查看代理注册</a>
+    </div>
+
+    <div class="card">
+      <h2>♡ 支持与保障</h2>
+
+      <a href="google-auth.html" class="item-link">
+    <div class="item">
+        <div><span class="check">✓</span>谷歌验证器下载</div>
+        <div class="arrow">›</div>
+    </div>
+</a>
+<a href="microsoft-auth.html" class="item-link">
+    <div class="item">
+        <div><span class="check">✓</span>微软验证器下载</div>
+        <div class="arrow">›</div>
+    </div>
+</a>
+      
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="tag">TG @mlzsatm</div>
+    <div class="tag">三条：zj2261</div>
+    <div class="tag">QQ：3913074534</div>
+    <div class="tag">Tato Talk：xkatm</div>
+    <div>© 2026 招商总监 - 阿童木</div>
+  </footer>
+
 </div>
-<div class="hero-card"><div class="orb"></div>
-<div class="mini-card card-a"><b>01</b><span>品牌展示</span></div>
-<div class="mini-card card-b"><b>02</b><span>数字服务</span></div>
-<div class="mini-card card-c"><b>03</b><span>长期合作</span></div>
-</div>
-</div></section>
 
-<section id="about" class="section"><div class="container two-col">
-<div><div class="section-tag">ABOUT</div><h2>让合作变得<br>简单而专业。</h2></div>
-<div class="text"><p>我们致力于为客户提供稳定、清晰、专业的数字化服务体验，从品牌展示到线上产品，为不同合作需求提供灵活方案。</p>
-<div class="stats"><div><strong>01</strong><span>专业方案</span></div><div><strong>02</strong><span>高效服务</span></div><div><strong>03</strong><span>持续支持</span></div></div></div>
-</div></section>
-
-<section id="services" class="section dark"><div class="container">
-<div class="section-tag">SERVICES</div><h2>核心服务</h2>
-<div class="grid">
-<article class="service"><span>01</span><h3>品牌展示</h3><p>打造清晰、专业、具有识别度的线上品牌形象。</p></article>
-<article class="service"><span>02</span><h3>网站开发</h3><p>提供响应式页面与现代化交互体验，兼容手机与电脑。</p></article>
-<article class="service"><span>03</span><h3>技术支持</h3><p>围绕网站内容、页面维护与线上运营提供持续支持。</p></article>
-</div></div></section>
-
-<section id="process" class="section"><div class="container">
-<div class="section-tag">PROCESS</div><h2>合作流程</h2>
-<div class="steps">
-<div><b>01</b><h3>沟通需求</h3><p>了解项目目标与合作方向。</p></div>
-<div><b>02</b><h3>方案确认</h3><p>确定页面、内容与服务方案。</p></div>
-<div><b>03</b><h3>执行上线</h3><p>完成制作、测试与正式发布。</p></div>
-<div><b>04</b><h3>持续支持</h3><p>根据实际需求提供后续服务。</p></div>
-</div></div></section>
-
-<section id="contact" class="contact"><div class="container contact-inner">
-<div><div class="section-tag">CONTACT</div><h2>准备开始<br>新的合作？</h2><p>欢迎通过以下方式联系我们。</p></div>
-<div class="contact-box">
-<a href="https://t.me/your_contact" target="_blank" rel="noopener">Telegram <span>↗</span></a>
-<a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp <span>↗</span></a>
-<a href="mailto:hello@example.com">Email <span>↗</span></a>
-</div></div></section>
-</main>
-
-<footer><div class="container"><span>YOUR·BRAND</span><span>© 2026 All Rights Reserved.</span></div></footer>
-<script src="script.js"></script>
-</body></html>
+</body>
+</html>
