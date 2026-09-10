@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品牌官方网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">YOUR BRAND</div>
+  <nav>
+    <a href="#home">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#service">服务</a>
+    <a href="#contact">联系我们</a>
+  </nav>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="tag">PROFESSIONAL SERVICE</p>
+    <h1>让优秀产品<br>触达更多用户</h1>
+    <p class="desc">提供专业、稳定、高效的数字化服务解决方案。</p>
+    <button class="primary-btn" onclick="contactUs()">立即咨询</button>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <p class="section-tag">ABOUT US</p>
+  <h2>专业团队 · 专业服务</h2>
+  <p>我们专注于数字产品、品牌展示及线上服务，为客户提供完整的解决方案。</p>
+</section>
+
+<section id="service" class="section">
+  <p class="section-tag">OUR SERVICE</p>
+  <h2>我们的服务</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">01</div>
+      <h3>品牌设计</h3>
+      <p>提供专业的品牌视觉与页面设计。</p>
+    </div>
+    <div class="card">
+      <div class="icon">02</div>
+      <h3>网站开发</h3>
+      <p>支持电脑、手机等多端自适应。</p>
+    </div>
+    <div class="card">
+      <div class="icon">03</div>
+      <h3>技术支持</h3>
+      <p>提供稳定的技术维护与升级服务。</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <p class="section-tag">CONTACT</p>
+  <h2>联系我们</h2>
+  <p>欢迎了解更多产品与服务。</p>
+  <button class="primary-btn" onclick="contactUs()">联系我们</button>
+</section>
+
+<footer>© 2026 YOUR BRAND. All Rights Reserved.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
