@@ -1,343 +1,893 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开云体育合营代理招商</title>
+
+<title>精选产品中心</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:"Microsoft YaHei",Arial,sans-serif;
-  background:linear-gradient(180deg,#ffffff 0%,#f6fbff 55%,#ffffff 100%);
-  color:#123456;
+    background:#071019;
+    color:#fff;
+    font-family:
+        Arial,
+        "Microsoft YaHei",
+        sans-serif;
 }
 
-.page{
-  min-height:100vh;
-  padding:10px 30px 30px;
+/* 顶部 */
+.topbar{
+    height:66px;
+    background:#171d4b;
+    display:flex;
+    align-items:center;
+    padding:0 32px;
+    gap:30px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.header{
-  height:48px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:bold;
+    color:#ffb51b;
 }
 
-.user-link{
-  display:flex;
-  align-items:center;
-  text-decoration:none;
+.logo-icon{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:#ffb51b;
+    color:#20265b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
 }
 
-.user{
-  display:flex;
-  align-items:center;
-  gap:8px;
+.slogan{
+    flex:1;
+    text-align:center;
+    color:#a7acce;
+    letter-spacing:2px;
+    font-size:14px;
 }
 
-.avatar{
-  width:28px;
-  height:28px;
-  overflow:hidden;
+.top-btn{
+    background:#ff9f13;
+    color:white;
+    padding:11px 23px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.badge{
-  background:#2f96dd;
-  color:#fff;
-  padding:7px 14px;
-  border-radius:18px;
-  font-size:14px;
-  font-weight:bold;
-}
-
-.nav a{
-  color:#1265ad;
-  text-decoration:none;
-  font-weight:bold;
-  margin-left:18px;
-}
-
+/* Banner */
 .hero{
-  text-align:center;
-  padding:25px 0 30px;
+    position:relative;
+    min-height:320px;
+    margin:0 13px 15px;
+    padding:42px 38px 80px;
+    overflow:hidden;
+    border-radius:0 0 25px 25px;
+
+    background:
+        linear-gradient(
+            115deg,
+            #5008df 0%,
+            #35107e 55%,
+            #42106e 100%
+        );
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    max-width:620px;
+}
+
+.hero-small{
+    color:#e5d9ff;
+    font-size:17px;
+    margin-bottom:10px;
 }
 
 .hero h1{
-  font-size:36px;
-  color:#6ca7df;
-  margin-bottom:12px;
+    font-size:36px;
+    margin-bottom:12px;
 }
 
 .hero p{
-  font-size:16px;
-  margin-bottom:18px;
+    color:#ddd2ff;
+    font-size:17px;
+    line-height:1.7;
 }
 
-.notice{
-  max-width:1100px;
-  margin:0 auto 20px;
-  background:#fff;
-  border:1px solid #e2edf7;
-  border-radius:20px;
-  padding:14px 25px;
-  box-shadow:0 18px 45px rgba(29,91,150,.08);
+.features{
+    display:grid;
+    grid-template-columns:160px 160px;
+    gap:13px;
+    margin-top:22px;
+    color:#eee6ff;
 }
 
-.platform-icons{
-  display:grid;
-  grid-template-columns:repeat(9,1fr);
-  align-items:center;
-  justify-items:center;
-  gap:15px;
+.feature{
+    font-size:14px;
 }
 
-.platform-item{
-  width:110px;
-  height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* 装饰 */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    opacity:.25;
+    filter:blur(2px);
 }
 
-.platform-item img{
-  width:105px;
-  height:55px;
-  object-fit:contain;
-  display:block;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));
-  transition:.3s;
+.circle1{
+    width:320px;
+    height:320px;
+    right:100px;
+    top:-160px;
+    background:#a86cff;
 }
 
-.platform-item img:hover{
-  transform:scale(1.08);
+.circle2{
+    width:240px;
+    height:240px;
+    right:300px;
+    bottom:-150px;
+    background:#742cff;
 }
 
-.cards{
-  max-width:1070px;
-  margin:20px auto 0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.star{
+    position:absolute;
+    right:130px;
+    top:45px;
+    font-size:190px;
+    opacity:.12;
+}
+
+/* 进入栏 */
+.entry{
+    position:absolute;
+    left:38px;
+    right:38px;
+    bottom:30px;
+    height:54px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #f0eaff
+    );
+
+    border-radius:14px;
+
+    color:#202035;
+    display:flex;
+    align-items:center;
+    padding:0 35px;
+
+    text-decoration:none;
+    font-size:19px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+}
+
+.entry span{
+    margin-left:15px;
+}
+
+/* 区块 */
+.section{
+    padding:18px 13px;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:0 8px 15px;
+}
+
+.section-title h2{
+    font-size:23px;
+}
+
+.section-title small{
+    margin-left:auto;
+    color:#697183;
+    letter-spacing:3px;
+}
+
+/* 产品卡片 */
+.products{
+    display:grid;
+    grid-template-columns:
+        repeat(3,1fr);
+    gap:14px;
 }
 
 .card{
-  background:#fff;
-  border:1px solid #dfeaf5;
-  border-radius:22px;
-  padding:22px 18px 30px;
-  box-shadow:0 26px 55px rgba(24,73,120,.12);
+    min-height:165px;
+    background:#291654;
+    border-radius:16px;
+
+    display:flex;
+    align-items:center;
+
+    padding:20px;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:
+        transform .2s,
+        background .2s;
 }
 
-.card h2{
-  font-size:20px;
-  color:#1767b2;
-  margin-bottom:14px;
+.card:hover{
+    transform:translateY(-3px);
+    background:#321c64;
 }
 
-.item-link{
-  text-decoration:none;
-  color:inherit;
-  display:block;
+.card-icon{
+    width:140px;
+    height:125px;
+
+    border-radius:13px;
+
+    background:#351d68;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:52px;
+    font-weight:bold;
+
+    flex-shrink:0;
 }
 
-.item{
-  height:44px;
-  border:1px solid #e4edf6;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 16px;
-  margin-bottom:8px;
-  background:#fff;
-  font-weight:bold;
+.a{color:#4fd6ff;}
+.b{color:#ff9b35;}
+.c{color:#b5d6ff;}
+.d{color:#63a8ff;}
+.e{color:#7ebaff;}
+.f{color:#6bc8ff;}
+
+.card-info{
+    padding-left:18px;
+    padding-right:30px;
 }
 
-.check{
-  color:#209ae8;
-  margin-right:8px;
+.card-info h3{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.card-info p{
+    font-size:14px;
+    color:#eee8ff;
+    margin-bottom:13px;
+}
+
+.card-info p span{
+    color:#52ee68;
+}
+
+.card-info small{
+    color:#aaa0c7;
 }
 
 .arrow{
-  color:#7aa6ca;
-  font-size:22px;
-}
+    position:absolute;
+    right:8px;
+    top:50%;
 
-.green-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  margin-top:12px;
-  padding:13px 30px;
-  background:linear-gradient(135deg,#28b94e,#178938);
-  color:#fff;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:bold;
-}
+    transform:translateY(-50%);
 
-.footer{
-  margin-top:20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
+    color:#8d84af;
+    font-size:40px;
 
-.tag{
-  background:#1f9b42;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:20px;
-  font-weight:bold;
-}
-
-@media(max-width:768px){
-  .page{
-    padding:10px 14px 24px;
-  }
-
-  .hero h1{
-    font-size:26px;
-  }
-
-  .platform-icons{
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-  }
-
-  .platform-item{
-    width:100%;
-    height:65px;
-  }
-
-  .platform-item img{
-    width:95px;
-    height:50px;
-  }
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-}
-.item-link{
     text-decoration:none;
-    color:inherit;
-    display:block;
-}</style>
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    right:48px;
+
+    padding:5px 11px;
+
+    border-radius:5px;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
+.hot{
+    background:#ff5148;
+}
+
+.vip{
+    background:#ff9f00;
+}
+
+.new{
+    background:#2ad83d;
+}
+
+/* 热门下载 */
+.downloads{
+    padding-top:38px;
+}
+
+.download-list{
+    display:grid;
+    grid-template-columns:
+        repeat(5,1fr);
+    gap:14px;
+}
+
+.download{
+    min-height:145px;
+
+    border-radius:16px;
+
+    padding:23px;
+
+    color:white;
+    text-decoration:none;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #079fc0,
+            #2632c9
+        );
+}
+
+.download:nth-child(2){
+    background:
+        linear-gradient(
+            145deg,
+            #3124bf,
+            #6b1cc8
+        );
+}
+
+.download:nth-child(3){
+    background:
+        linear-gradient(
+            145deg,
+            #ff8b00,
+            #e3b51c
+        );
+}
+
+.download:nth-child(4){
+    background:
+        linear-gradient(
+            145deg,
+            #3720c8,
+            #6437ef
+        );
+}
+
+.download:nth-child(5){
+    background:
+        linear-gradient(
+            145deg,
+            #9d171c,
+            #d94718
+        );
+}
+
+.download-icon{
+    font-size:40px;
+    margin-bottom:auto;
+}
+
+.download strong{
+    font-size:17px;
+}
+
+.download small{
+    margin-top:6px;
+    opacity:.75;
+}
+
+/* 页脚 */
+footer{
+    text-align:center;
+    color:#626b79;
+    padding:40px 20px;
+    font-size:13px;
+}
+
+/* 平板 */
+@media(max-width:900px){
+
+    .slogan{
+        display:none;
+    }
+
+    .products{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .download-list{
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+}
+
+/* 手机 */
+@media(max-width:600px){
+
+    .topbar{
+        height:58px;
+        padding:0 15px;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .top-btn{
+        padding:8px 14px;
+        font-size:13px;
+    }
+
+    .hero{
+        margin:0 8px 10px;
+        min-height:350px;
+        padding:30px 20px 80px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .features{
+        grid-template-columns:
+            repeat(2,130px);
+    }
+
+    .entry{
+        left:20px;
+        right:20px;
+        bottom:24px;
+        padding:0 20px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:140px;
+    }
+
+    .card-icon{
+        width:100px;
+        height:100px;
+        font-size:40px;
+    }
+
+    .card-info h3{
+        font-size:19px;
+    }
+
+    .download-list{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .section-title small{
+        display:none;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="page">
+<!-- 顶部 -->
+<header class="topbar">
 
-  <header class="header">
-    <a href="https://t.me/mlzsatm" target="_blank" class="user-link">
-      <div class="user">
-        <div class="avatar">
-          <img src="xintu/telegram.png" alt="头像">
-        </div>
-        <div class="badge">招商总监 · 阿童木</div>
-      </div>
+    <div class="logo">
+        <div class="logo-icon">✦</div>
+        <span>星云精选</span>
+    </div>
+
+    <div class="slogan">
+        2026 精选产品 · 专业 · 便捷 · 安心
+    </div>
+
+    <a href="#products" class="top-btn">
+        立即查看
     </a>
 
-    <nav class="nav">
-      <a href="#">首页</a>
-    </nav>
-  </header>
+</header>
 
-  <section class="hero">
-    <h1>开云体育合营代理招商与系统对接</h1>
-    <p>稳定对接 · 流程清晰 · 扶持到位</p>
-  </section>
 
-  <div class="notice">
-    <div class="platform-icons">
-      <div class="platform-item"><img src="xintu/kaiyun-new.png" alt="开云"></div>
-      <div class="platform-item"><img src="xintu/aiyouxi.png" alt="爱游戏"></div>
-      <div class="platform-item"><img src="xintu/huatihui.PNG" alt="华体会"></div>
-      <div class="platform-item"><img src="xintu/leyu.png" alt="乐鱼"></div>
-      <div class="platform-item"><img src="xintu/milan.png" alt="米兰"></div>
-      <div class="platform-item"><img src="xintu/xingkong.png" alt="星空"></div>
-      <div class="platform-item"><img src="xintu/od.png" alt="OD"></div>
-      <div class="platform-item"><img src="xintu/jiuyou.png" alt="九游"></div>
-      <div class="platform-item"><img src="xintu/mk.png" alt="MK"></div>
-    </div>
-  </div>
+<main>
 
-  <section class="cards">
+<!-- Banner -->
+<section class="hero">
 
-    <div class="card">
-      <h2>☷ 流程与政策</h2>
+    <div class="hero-content">
 
-      <a href="huodong.html" class="item-link">
-        <div class="item">
-          <div><span class="check">✓</span>合营招商活动图（每月实时更新）</div>
-          <div class="arrow">›</div>
+        <div class="hero-small">
+            精选 · 专业 · 便捷
         </div>
-      </a>
 
-      <a href="xiaxian.html" class="item-link">
-        <div class="item">
-          <div><span class="check">✓</span>代理如何发展线下会员</div>
-          <div class="arrow">›</div>
+        <h1>
+            发现更好的数字产品
+        </h1>
+
+        <p>
+            精选实用工具与数字服务，
+            快速找到适合你的产品。
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                ✓ 精品工具
+            </div>
+
+            <div class="feature">
+                ✓ 数字服务
+            </div>
+
+            <div class="feature">
+                ✓ 移动应用
+            </div>
+
+            <div class="feature">
+                ✓ 效率产品
+            </div>
+
         </div>
-      </a>
 
-      <a href="qudao.html" class="item-link">
-        <div class="item">
-          <div><span class="check">✓</span>代理渠道费扶持</div>
-          <div class="arrow">›</div>
-        </div>
-      </a>
-
-      <a href="register.html" class="green-btn">➜ 查看代理注册</a>
     </div>
 
-    <div class="card">
-      <h2>♡ 支持与保障</h2>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
 
-      <a href="google-auth.html" class="item-link">
-    <div class="item">
-        <div><span class="check">✓</span>谷歌验证器下载</div>
-        <div class="arrow">›</div>
-    </div>
-</a>
-<a href="microsoft-auth.html" class="item-link">
-    <div class="item">
-        <div><span class="check">✓</span>微软验证器下载</div>
-        <div class="arrow">›</div>
-    </div>
-</a>
-      
+    <div class="star">
+        ✦
     </div>
 
-  </section>
 
-  <footer class="footer">
-    <div class="tag">TG @mlzsatm</div>
-    <div class="tag">三条：zj2261</div>
-    <div class="tag">QQ：3913074534</div>
-    <div class="tag">Tato Talk：xkatm</div>
-    <div>© 2026 招商总监 - 阿童木</div>
-  </footer>
+    <a href="#products" class="entry">
 
-</div>
+        <strong>
+            进入产品中心
+        </strong>
+
+        <span>
+            🎁
+        </span>
+
+    </a>
+
+</section>
+
+
+<!-- 产品 -->
+<section class="section" id="products">
+
+    <div class="section-title">
+
+        <h2>
+            精选产品
+        </h2>
+
+        <small>
+            FEATURED PRODUCTS
+        </small>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <article class="card">
+
+            <div class="card-icon a">
+                A
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    产品 A
+                </h3>
+
+                <p>
+                    🎁 精选服务　
+                    <span>✓ 官方产品</span>
+                </p>
+
+                <small>
+                    简洁好用，快速上手
+                </small>
+
+            </div>
+
+            <b class="badge hot">
+                HOT
+            </b>
+
+            <a href="#" class="arrow">
+                ›
+            </a>
+
+        </article>
+
+
+
+        <article class="card">
+
+            <div class="card-icon b">
+                B
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    产品 B
+                </h3>
+
+                <p>
+                    🎁 专业工具　
+                    <span>✓ 精选推荐</span>
+                </p>
+
+                <small>
+                    高效稳定，适合日常使用
+                </small>
+
+            </div>
+
+            <b class="badge vip">
+                VIP
+            </b>
+
+            <a href="#" class="arrow">
+                ›
+            </a>
+
+        </article>
+
+
+
+        <article class="card">
+
+            <div class="card-icon c">
+                C
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    产品 C
+                </h3>
+
+                <p>
+                    🎁 新品上线　
+                    <span>✓ 值得体验</span>
+                </p>
+
+                <small>
+                    全新体验，持续更新
+                </small>
+
+            </div>
+
+            <b class="badge new">
+                NEW
+            </b>
+
+            <a href="#" class="arrow">
+                ›
+            </a>
+
+        </article>
+
+
+
+        <article class="card">
+
+            <div class="card-icon d">
+                D
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    产品 D
+                </h3>
+
+                <p>
+                    🎁 精品工具　
+                    <span>✓ 精选推荐</span>
+                </p>
+
+                <small>
+                    让工作流程更加简单
+                </small>
+
+            </div>
+
+            <a href="#" class="arrow">
+                ›
+            </a>
+
+        </article>
+
+
+
+        <article class="card">
+
+            <div class="card-icon e">
+                E
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    产品 E
+                </h3>
+
+                <p>
+                    🎁 数字服务　
+                    <span>✓ 官方产品</span>
+                </p>
+
+                <small>
+                    快速、清晰、易于使用
+                </small>
+
+            </div>
+
+            <b class="badge hot">
+                HOT
+            </b>
+
+            <a href="#" class="arrow">
+                ›
+            </a>
+
+        </article>
+
+
+
+        <article class="card">
+
+            <div class="card-icon f">
+                F
+            </div>
+
+            <div class="card-info">
+
+                <h3>
+                    产品 F
+                </h3>
+
+                <p>
+                    🎁 新品推荐　
+                    <span>✓ 精选服务</span>
+                </p>
+
+                <small>
+                    更多功能，更多可能
+                </small>
+
+            </div>
+
+            <a href="#" class="arrow">
+                ›
+            </a>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- 热门下载 -->
+<section class="section downloads">
+
+    <div class="section-title">
+
+        <h2>
+            🔥 热门下载
+        </h2>
+
+        <small>
+            POPULAR APPS
+        </small>
+
+    </div>
+
+
+    <div class="download-list">
+
+        <a href="#" class="download">
+            <span class="download-icon">◉</span>
+            <strong>效率工具</strong>
+            <small>立即查看</small>
+        </a>
+
+        <a href="#" class="download">
+            <span class="download-icon">◆</span>
+            <strong>移动应用</strong>
+            <small>立即查看</small>
+        </a>
+
+        <a href="#" class="download">
+            <span class="download-icon">✦</span>
+            <strong>设计工具</strong>
+            <small>立即查看</small>
+        </a>
+
+        <a href="#" class="download">
+            <span class="download-icon">●</span>
+            <strong>云端服务</strong>
+            <small>立即查看</small>
+        </a>
+
+        <a href="#" class="download">
+            <span class="download-icon">★</span>
+            <strong>实用软件</strong>
+            <small>立即查看</small>
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+    © 2026 星云精选 · Product Showcase
+</footer>
+
 
 </body>
 </html>
