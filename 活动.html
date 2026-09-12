@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活动页面</title>
+
+<style>
+body{
+    margin:0;
+    padding:20px;
+    background:#080f18;
+    color:#fff;
+    font-family:Arial,"Microsoft YaHei",sans-serif;
+}
+
+.page{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+h1{
+    text-align:center;
+    margin:10px 0 30px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:10px 18px;
+    border-radius:20px;
+    background:#6735d8;
+    color:#fff;
+    text-decoration:none;
+}
+
+.activity-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.activity-list img{
+    width:100%;
+    display:block;
+    border-radius:14px;
+}
+
+@media(max-width:700px){
+    .activity-list{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<a href="index.html" class="back">← 返回首页</a>
+
+<h1>活动页面</h1>
+
+<div class="activity-list">
+
+<img src="活动.jpg" alt="活动图片1">
+<img src="活动2.jpg" alt="活动图片2">
+<img src="活动3.jpg" alt="活动图片3">
+<img src="活动4.jpg" alt="活动图片4">
+<img src="活动5.jpg" alt="活动图片5">
+<img src="活动6.jpg" alt="活动图片6">
+
+</div>
+
+</div>
+
+</body>
+</html>
