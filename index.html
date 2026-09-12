@@ -648,7 +648,7 @@ footer{
     height:100%;
     object-fit:contain;
     object-position:center top;
-}}</style>
+}</style>
 </head>
 
 <body>
@@ -980,7 +980,41 @@ footer{
     to{
         transform:translateX(-100%);
     }
-}</style>
+.image-popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+}
+
+.popup-images{
+    width:90%;
+    max-height:90vh;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    overflow-y:auto;
+    padding:20px;
+}
+
+.popup-images img{
+    width:100%;
+    max-height:42vh;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+.image-popup-close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    color:#fff;
+    cursor:pointer;
+}}</style>
 
 
  <!-- 热门下载 -->
@@ -993,7 +1027,7 @@ footer{
 
     <div class="download-list">
 
-        <a href="#" class="download">
+    <a href="javascript:openImagePopup(['活动.jpg','活动2.jpg','活动3.jpg','活动4.jpg','活动5.jpg','活动6.jpg'])" class="download">   
             <span class="download-icon">◉</span>
             <strong>云端服务</strong>
             <small>立即查看</small>
@@ -1057,6 +1091,37 @@ footer{
 
 </footer>
 
+
+<!-- 活动图片弹窗 -->
+<div class="image-popup" id="imagePopup">
+    <span class="image-popup-close" onclick="closeImagePopup()">×</span>
+
+    <div class="popup-images">
+        <img id="popupImage1" src="" alt="活动图片1">
+        <img id="popupImage2" src="" alt="活动图片2">
+        <img id="popupImage3" src="" alt="活动图片3">
+        <img id="popupImage4" src="" alt="活动图片4">
+        <img id="popupImage5" src="" alt="活动图片5">
+        <img id="popupImage6" src="" alt="活动图片6">
+    </div>
+</div>
+
+<script>
+function openImagePopup(images) {
+    document.getElementById("popupImage1").src = images[0];
+    document.getElementById("popupImage2").src = images[1];
+    document.getElementById("popupImage3").src = images[2];
+    document.getElementById("popupImage4").src = images[3];
+    document.getElementById("popupImage5").src = images[4];
+    document.getElementById("popupImage6").src = images[5];
+
+    document.getElementById("imagePopup").style.display = "flex";
+}
+
+function closeImagePopup() {
+    document.getElementById("imagePopup").style.display = "none";
+}
+</script>
 
 </body>
 </html>
