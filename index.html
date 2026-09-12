@@ -877,7 +877,73 @@ footer{
         text-align:center;
     }
 }
-}</style>
+}
+ 
+/* 手机端最终布局修复 */
+@media screen and (max-width:768px){
+
+    .section-title{
+        width:100% !important;
+        display:block !important;
+        text-align:center !important;
+    }
+
+    .section-title h2{
+        width:auto !important;
+        display:block !important;
+        white-space:nowrap !important;
+        writing-mode:horizontal-tb !important;
+        font-size:26px !important;
+        margin:0 0 5px !important;
+    }
+
+    .section-title small{
+        display:block !important;
+        white-space:nowrap !important;
+        letter-spacing:4px !important;
+    }
+
+    .products-section{
+        width:100% !important;
+        box-sizing:border-box !important;
+    }
+
+    .products-grid{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        width:100% !important;
+        gap:16px !important;
+        box-sizing:border-box !important;
+    }
+
+    .product-card{
+        width:100% !important;
+        min-width:0 !important;
+        max-width:none !important;
+        box-sizing:border-box !important;
+    }
+
+    .product-card h3,
+    .product-card strong,
+    .product-card p,
+    .product-card span{
+        writing-mode:horizontal-tb !important;
+        white-space:normal !important;
+    }
+
+    .product-card img{
+        max-width:100% !important;
+        height:auto !important;
+        object-fit:contain !important;
+    }
+
+    .download-list{
+        grid-template-columns:repeat(2,1fr) !important;
+        width:100% !important;
+    }
+}
+
+</style>
 </head>
 
 <body>
