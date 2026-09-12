@@ -1141,7 +1141,7 @@ footer{
   <div class="section-title">
     <div class="title-left">
       <span class="star">★</span>
-      <h2>精选产品</h2>
+      <h2 style="writing-mode:horizontal-tb !important;white-space:nowrap !important;word-break:keep-all !important;width:auto !important;height:auto !important;">精选产品</h2>
     </div>
     <span class="featured-en">FEATURED PRODUCTS</span>
   </div>
@@ -1555,7 +1555,12 @@ footer{
 
 </footer>
 
+</style>
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
+<body>
 <!-- 活动图片弹窗 -->
 <div class="image-popup" id="imagePopup" style="display:none;">
     <span class="image-popup-close" onclick="closeImagePopup()">×</span>
@@ -1569,25 +1574,3 @@ footer{
         <img id="popupImage6" src="" alt="活动图片6">
     </div>
 </div>
-
-<script>
-function openImagePopup(images) {
-    document.getElementById("popupImage1").src = images[0];
-    document.getElementById("popupImage2").src = images[1];
-    document.getElementById("popupImage3").src = images[2];
-    document.getElementById("popupImage4").src = images[3];
-    document.getElementById("popupImage5").src = images[4];
-    document.getElementById("popupImage6").src = images[5];
-
-    document.getElementById("imagePopup").style.display = "flex";
-}
-
-function closeImagePopup() {
-    document.getElementById("imagePopup").style.display = "none";
-}
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
