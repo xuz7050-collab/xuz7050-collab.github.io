@@ -17,7 +17,55 @@ body{
     color:#111827;
     font-family:Arial,"Microsoft YaHei",sans-serif;
 }
+.microsoft-icon{
+    width:120px;
+    height:120px;
+    margin:20px auto 25px;
+    border-radius:28px;
+    background:linear-gradient(135deg,#0078d4,#00a4ef);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:58px;
+    box-shadow:0 8px 24px rgba(0,120,212,.28);
+}
+.ms-lock{
+    position:relative;
+    width:70px;
+    height:80px;
+}
 
+.ms-lock-top{
+    position:absolute;
+    width:42px;
+    height:42px;
+    border:10px solid #1769aa;
+    border-bottom:none;
+    border-radius:25px 25px 0 0;
+    left:14px;
+    top:0;
+}
+
+.ms-lock-body{
+    position:absolute;
+    width:70px;
+    height:52px;
+    background:linear-gradient(135deg,#0078d4,#00a4ef);
+    border-radius:14px 14px 24px 24px;
+    left:0;
+    top:30px;
+    box-shadow:0 5px 12px rgba(0,80,160,.3);
+}
+
+.ms-lock-dot{
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#38bdf8;
+    left:26px;
+    top:12px;
+}    
 .download-page{
     max-width:900px;
     margin:0 auto;
@@ -195,7 +243,14 @@ body{
             rel="noopener noreferrer">
             苹果下载
         </a>
-
+<div class="microsoft-icon">
+    <div class="ms-lock">
+        <div class="ms-lock-top"></div>
+        <div class="ms-lock-body">
+            <div class="ms-lock-dot"></div>
+        </div>
+    </div>
+</div>
     <div class="info">
     <h2>Microsoft Authenticator</h2>
     <p>微软身份验证器</p>
