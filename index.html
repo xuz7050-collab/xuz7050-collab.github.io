@@ -1127,6 +1127,37 @@ filter:brightness(1.2) !important;
     filter:brightness(1.15) !important;
     z-index:2;
 }
+/* 进入游戏按钮动效 */
+.game-button{
+    transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+    cursor:pointer;
+}
+
+.game-button:hover{
+    transform:translateY(-5px) scale(1.06) !important;
+    box-shadow:0 10px 28px rgba(160,120,255,.65) !important;
+    filter:brightness(1.15) !important;
+}
+
+.game-button:hover span:last-child{
+    transform:scale(1.2) rotate(8deg);
+}
+
+.game-button span:last-child{
+    display:inline-block;
+    transition:transform .25s ease;
+}
+/* 立即咨询按钮动效 */
+.top-btn{
+    transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+    cursor:pointer;
+}
+
+.top-btn:hover{
+    transform:translateY(-4px) scale(1.06) !important;
+    box-shadow:0 10px 28px rgba(255,170,40,.55) !important;
+    filter:brightness(1.12) !important;
+}
 </style>
 </head>
 
