@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google 身份验证器下载</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:#f4f8ff;
+    color:#111827;
+    font-family:Arial,"Microsoft YaHei",sans-serif;
+}
+
+.download-page{
+    max-width:900px;
+    margin:0 auto;
+    padding:30px 20px 80px;
+    text-align:center;
+}
+
+.info{
+    font-size:22px;
+    line-height:2;
+    margin:18px 0;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    margin-top:55px;
+}
+
+.download-btn{
+    width:195px;
+    padding:16px 20px;
+    border-radius:16px;
+    background:#2f7de1;
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+}
+
+.download-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 12px 30px rgba(47,125,225,.4);
+    filter:brightness(1.08);
+}
+
+@media(max-width:600px){
+    .info{
+        font-size:18px;
+    }
+
+    .download-btn{
+        width:180px;
+        font-size:21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="download-page">
+
+    <div class="info">
+        1、打开 Google 身份验证器，点击右上角“菜单”按钮
+    </div>
+
+    <div class="info">
+        2、点击“设置”，进入设置界面
+    </div>
+
+    <div class="info">
+        3、点击“校正用来生成验证码的时间”
+    </div>
+
+    <div class="info">
+        4、点击“立即同步”，稍等片刻即可
+    </div>
+
+    <div class="info">
+        如仍无法验证，请在谷歌验证器上删除 Key 后，重新绑定再输入验证码。
+    </div>
+
+    <div class="info">
+        若还是提示错误，请重复以上操作。
+    </div>
+
+    <div class="info">
+        密码错误次数太多被锁定后，请等待 1 小时后重试。
+    </div>
+
+    <div class="buttons">
+
+        <a
+            href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"
+            class="download-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            安卓下载
+        </a>
+
+        <a
+            href="https://apps.apple.com/us/app/google-authenticator/id388497605"
+            class="download-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            苹果下载
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
