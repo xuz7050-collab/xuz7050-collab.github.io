@@ -24,7 +24,68 @@ body{
     padding:30px 20px 80px;
     text-align:center;
 }
+.app-header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:35px;
+    margin-bottom:50px;
+    text-align:left;
+}
 
+.app-icon{
+    width:150px;
+    height:150px;
+    background:#fff;
+    border-radius:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
+}
+
+.auth-icon{
+    position:relative;
+    width:90px;
+    height:90px;
+}
+
+.auth-icon span{
+    position:absolute;
+    display:block;
+    width:24px;
+    height:75px;
+    border-radius:15px;
+    left:33px;
+    top:7px;
+}
+
+.auth-icon span:nth-child(1){
+    background:#fbbc04;
+    transform:rotate(-32deg);
+}
+
+.auth-icon span:nth-child(2){
+    background:#4285f4;
+    transform:rotate(32deg);
+}
+
+.auth-icon span:nth-child(3){
+    background:#34a853;
+    transform:rotate(90deg);
+}
+
+.app-title h1{
+    margin:0 0 12px;
+    font-size:48px;
+    color:#202124;
+}
+
+.app-title div{
+    font-size:24px;
+    color:#0f9d58;
+    font-weight:500;
+}
 .info{
     font-size:22px;
     line-height:2;
@@ -73,6 +134,21 @@ body{
 <body>
 
 <div class="download-page">
+
+    <div class="app-header">
+        <div class="app-icon">
+            <div class="auth-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="app-title">
+            <h1>Google 身份验证器</h1>
+            <div>Google LLC</div>
+        </div>
+    </div>
 
     <div class="info">
         1、打开 Google 身份验证器，点击右上角“菜单”按钮
