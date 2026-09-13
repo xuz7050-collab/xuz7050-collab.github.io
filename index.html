@@ -1579,9 +1579,9 @@ function goDeviceLink(event,h5Url,pcUrl){
     event.preventDefault();
 
     if(window.innerWidth <= 768){
-        window.location.href = h5Url;
+        window.open(h5Url, '_blank');
     }else{
-        window.location.href = pcUrl;
+        window.open(pcUrl, '_blank');
     }
 
     return false;
