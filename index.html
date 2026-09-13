@@ -1611,13 +1611,11 @@ onclick="return goDeviceLink(event,'https://www.pwq6o9.vip:9553/?growCode=lo8816
             <span class="download-icon">◉</span>
             <strong>合营待遇</strong>
             <small>立即查看</small>
-        </a>
-
-        <a href="#" class="download">
-            <span class="download-icon">◆</span>
-            <strong>谷歌验证器</strong>
-            <small>立即查看</small>
-        </a>
+   <a href="#" class="download" onclick="openGoogleAuthenticator(event)">     
+    <span class="download-icon">◆</span>
+    <strong>谷歌验证器</strong>
+    <small>立即查看</small>
+</a>
 
         <a href="#" class="download">
             <span class="download-icon">★</span>
@@ -1689,7 +1687,31 @@ function goDeviceLink(event,h5Url,pcUrl){
 
     return false;
 }
-</script>   
+function openGoogleAuthenticator(event){
+    event.preventDefault();
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+    if(/iPhone|iPad|iPod/i.test(ua)){
+        window.open(
+            'https://apps.apple.com/us/app/google-authenticator/id388497605',
+            '_blank'
+        );
+    }else if(/Android/i.test(ua)){
+        window.open(
+            'https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2',
+            '_blank'
+        );
+    }else{
+        window.open(
+            'https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2',
+            '_blank'
+        );
+    }
+
+    return false;
+}
+</script> 
 <!-- 活动图片弹窗 -->
 <div class="image-popup" id="imagePopup" style="display:none;">
     <span class="image-popup-close" onclick="closeImagePopup()">×</span>
