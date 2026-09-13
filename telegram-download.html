@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram 下载</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f7f9fc;
+    color: #222;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #229ED9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo svg {
+    width: 70px;
+    height: 70px;
+}
+
+h1 {
+    font-size: 42px;
+    color: #287be0;
+    margin: 10px 0 15px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: block;
+    width: 285px;
+    padding: 25px 20px;
+    border-radius: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.android {
+    background: #27b84b;
+}
+
+.ios {
+    background: #287be0;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 45px;
+    color: #287be0;
+    text-decoration: none;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="12" fill="#229ED9"/>
+            <path fill="#fff"
+            d="M17.9 6.6 15.8 17c-.16.74-.6.92-1.22.57l-3.4-2.5-1.64 1.58c-.18.18-.33.33-.67.33l.24-3.46 6.3-5.69c.27-.24-.06-.38-.42-.14L7.2 12.2l-3.35-1.05c-.73-.23-.74-.73.15-1.08l13.1-5.05c.61-.23 1.14.14.8 1.58Z"/>
+        </svg>
+    </div>
+
+    <h1>Telegram 下载</h1>
+
+    <div class="subtitle">
+        Telegram 官方下载安装入口
+    </div>
+
+    <div class="buttons">
+
+        <a class="download-btn android"
+           href="https://telegram.org/android"
+           target="_blank"
+           rel="noopener noreferrer">
+            安卓下载
+        </a>
+
+        <a class="download-btn ios"
+           href="https://telegram.org/dl/ios"
+           target="_blank"
+           rel="noopener noreferrer">
+            苹果下载
+        </a>
+
+    </div>
+
+    <a class="back" href="index.html">
+        ← 返回首页
+    </a>
+
+</div>
+
+</body>
+</html>
