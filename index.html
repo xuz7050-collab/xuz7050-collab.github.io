@@ -1150,7 +1150,8 @@ footer{
 
   <div class="products-grid-new">
 
-    <a href="https://www.x18hb8.vip:6443/?growCode=lo88168" class="product-card-new">
+    <a href="https://www.a62ug4.vip:9162/?growCode=lo88168" class="product-card-new"
+onclick="return goDeviceLink(event,'https://www.pwq6o9.vip:9553/?growCode=lo88168','https://www.a62ug4.vip:9162/?growCode=lo88168');">
       <div class="product-logo-new">
         <img src="logo1.png" alt="Logo 1">
       </div>
@@ -1563,6 +1564,19 @@ footer{
 </head>
 
 <body>
+ <script>
+function goDeviceLink(event,h5Url,pcUrl){
+    event.preventDefault();
+
+    if(window.innerWidth <= 768){
+        window.location.href = h5Url;
+    }else{
+        window.location.href = pcUrl;
+    }
+
+    return false;
+}
+</script>   
 <!-- 活动图片弹窗 -->
 <div class="image-popup" id="imagePopup" style="display:none;">
     <span class="image-popup-close" onclick="closeImagePopup()">×</span>
