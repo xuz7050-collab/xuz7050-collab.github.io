@@ -1113,7 +1113,20 @@ filter:brightness(1.2) !important;
 .download-list .download:hover .download-icon{
     transform:scale(1.25) rotate(12deg) !important;
 }
+/* 精选产品卡片动感效果 */
+.product-card-new{
+    position:relative;
+    overflow:hidden;
+    transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+    cursor:pointer;
+}
 
+.product-card-new:hover{
+    transform:translate3d(0,-10px,0) scale(1.03) !important;
+    box-shadow:0 20px 45px rgba(160,120,255,.65) !important;
+    filter:brightness(1.15) !important;
+    z-index:2;
+}
 </style>
 </head>
 
