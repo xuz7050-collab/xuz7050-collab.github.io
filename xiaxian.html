@@ -273,21 +273,42 @@ body{
 .back-home:hover {
     background: rgba(47, 128, 237, 0.1);
 }
-.demo-title {
+.page-title {
     text-align: center;
-    margin: 35px 0;
+    margin: 45px 0 35px;
 }
 
-.demo-title h1 {
-    font-size: 52px;
-    color: #2878e8;
+.page-title h1 {
     margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 700;
+    text-shadow:
+        0 0 8px rgba(80,180,255,.8),
+        0 0 20px rgba(40,140,255,.6);
 }
 
-.demo-title p {
-    font-size: 24px;
-    color: #555;
+.page-title p {
     margin: 0;
+    color: #59bfff;
+    font-size: 26px;
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(50,170,255,.5);
+}
+
+.page-title::after {
+    content: "";
+    display: block;
+    width: 210px;
+    height: 3px;
+    margin: 25px auto 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #36bfff,
+        transparent
+    );
+    box-shadow: 0 0 12px rgba(50,180,255,.8);
 }
 </style>
     
