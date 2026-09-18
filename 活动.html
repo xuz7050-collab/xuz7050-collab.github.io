@@ -108,7 +108,26 @@ body{
     box-shadow:
         0 0 18px rgba(21,156,255,.8);
 }
+/* 活动中心说明图片 */
+.activity-guide{
+    width:100%;
+    max-width:1200px;
+    margin:35px auto 35px;
+    text-align:center;
+}
 
+.activity-guide img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+    border-radius:24px;
+    border:2px solid rgba(52,190,255,.75);
+    box-shadow:
+        0 0 15px rgba(0,140,255,.7),
+        0 0 45px rgba(0,100,255,.35),
+        0 25px 70px rgba(0,0,0,.35);
+}
 
 /* 手机端 */
 @media(max-width:600px){
@@ -132,6 +151,14 @@ body{
         width:120px;
         margin-top:18px;
     }
+    .activity-guide{
+    margin:25px auto;
+}
+
+.activity-guide img{
+    border-radius:16px;
+    border-width:1px;
+}
 }
 body::before{
     content:"★　✦　★　✦　★";
@@ -229,7 +256,10 @@ body::before{
     <h1>活动中心每月活动报名登记流程</h1>
     <p>精选活动 · 福利活动 · 限时活动</p>
 </div>
-
+<!-- 活动中心说明图片 -->
+<div class="activity-guide">
+    <img src="photo_2026-09-18_16-04-57.jpg" alt="活动中心报名说明">
+</div>
 <a href="index.html" class="back">← 返回首页</a>
 </div>
 
