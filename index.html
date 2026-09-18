@@ -1395,19 +1395,32 @@ onclick="return goDeviceLink(event,'https://www.pwq6o9.vip:9553/?growCode=lo8816
 
 <style>
    .new-button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 320px;
-    margin: 18px 0 25px 0;
-    padding: 18px 20px;
+    height: 54px;
+
+    margin: 15px 0 0 0;
+    padding: 0 28px;
+
+    box-sizing: border-box;
+    border-radius: 30px;
+
     text-align: center;
     text-decoration: none;
-    border-radius: 40px;
+
     background: #36bfff;
     color: #fff;
-    font-size: 22px;
-    font-weight: 600;
-    box-shadow: 0 5px 18px rgba(54,191,255,.3);
-    transition: all .2s ease;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+    transition: transform .25s ease,
+                box-shadow .25s ease,
+                filter .25s ease;
 }
 
 .new-button:hover {
