@@ -18,7 +18,121 @@ body{
     color:#17385f;
     font-family:Arial,"Microsoft YaHei",sans-serif;
 }
+/* ===== 活动中心标题 ===== */
+.bottom-title{
+    width:100%;
+    max-width:1200px;
+    margin:45px auto 25px;
+    text-align:center;
+}
 
+.bottom-title h1{
+    margin:0 0 14px;
+    padding:0;
+
+    font-family:Arial,"Microsoft YaHei",sans-serif;
+    font-size:52px;
+    line-height:1.2;
+    font-weight:800;
+    letter-spacing:2px;
+
+    color:#e9f7ff;
+
+    text-align:center;
+
+    text-shadow:
+        0 0 10px rgba(60,180,255,.7),
+        0 0 25px rgba(20,120,255,.45);
+}
+
+
+/* ===== 和 xiaxian.html 标题一致 ===== */
+.bottom-title{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+    padding:55px 20px 30px;
+    text-align:center;
+    position:relative;
+}
+
+.bottom-title h1{
+    margin:0 0 14px;
+    padding:0;
+
+    font-size:52px;
+    line-height:1.2;
+    font-weight:800;
+    letter-spacing:2px;
+
+    color:#e9f7ff;
+
+    text-shadow:
+        0 0 10px rgba(60,180,255,.7),
+        0 0 25px rgba(20,120,255,.45);
+}
+
+.bottom-title p{
+    margin:0;
+    padding:0;
+
+    font-size:22px;
+    line-height:1.5;
+    font-weight:400;
+
+    color:#9bdcff;
+
+    letter-spacing:2px;
+    text-align:center;
+}
+
+/* 标题下面的蓝色发光横线 */
+.bottom-title::after{
+    content:"";
+    display:block;
+
+    width:180px;
+    height:3px;
+
+    margin:25px auto 0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #159cff,
+        #5ee7ff,
+        #159cff,
+        transparent
+    );
+
+    box-shadow:
+        0 0 18px rgba(21,156,255,.8);
+}
+
+
+/* 手机端 */
+@media(max-width:600px){
+
+    .bottom-title{
+        padding:30px 8px 22px;
+    }
+
+    .bottom-title h1{
+        font-size:30px;
+        letter-spacing:1px;
+        margin-bottom:14px;
+    }
+
+    .bottom-title p{
+        font-size:15px;
+        letter-spacing:1px;
+    }
+
+    .bottom-title::after{
+        width:120px;
+        margin-top:18px;
+    }
+}
 body::before{
     content:"★　✦　★　✦　★";
     position:fixed;
@@ -112,12 +226,8 @@ h1{
 
 <!-- 底部标题 -->
 <div class="bottom-title">
-    <div class="bottom-title-main">
-        活动中心
-    </div>
-    <div class="bottom-title-sub">
-        精选活动 · 福利活动 · 限时活动
-    </div>
+    <h1>活动中心</h1>
+    <p>精选活动 · 福利活动 · 限时活动</p>
 </div>
 
 <a href="index.html" class="back">← 返回首页</a>
