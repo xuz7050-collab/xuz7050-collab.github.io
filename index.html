@@ -1819,7 +1819,28 @@ onclick="return goDeviceLink(event,'https://www.pwq6o9.vip:9553/?growCode=lo8816
     </div>
 
 </footer>
+/* 标题右侧发光分割线 */
+.section-title .title-left{
+    display:flex;
+    align-items:center;
+    flex:1;
+}
 
+.section-title .title-left::after{
+    content:"";
+    flex:1;
+    height:3px;
+    margin-left:25px;
+    background:linear-gradient(
+        90deg,
+        #159cff,
+        #5ee7ff,
+        transparent
+    );
+    box-shadow:
+        0 0 8px rgba(21,156,255,.9),
+        0 0 20px rgba(21,156,255,.6);
+}
 </style>
         
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
