@@ -1470,6 +1470,27 @@ onclick="return goDeviceLink(event,'https://www.pwq6o9.vip:9553/?growCode=lo8816
         0 0 8px rgba(21,156,255,.9),
         0 0 20px rgba(21,156,255,.6);
 }
+ /* 热门下载右侧发光分割线 */
+.section.downloads .section-title{
+    display:flex;
+    align-items:center;
+}
+
+.section.downloads .section-title::after{
+    content:"";
+    flex:1;
+    height:3px;
+    margin-left:25px;
+    background:linear-gradient(
+        90deg,
+        #159cff,
+        #5ee7ff,
+        transparent
+    );
+    box-shadow:
+        0 0 8px rgba(21,156,255,.9),
+        0 0 20px rgba(21,156,255,.6);
+}  
    .new-button {
     display: flex;
     align-items: center;
