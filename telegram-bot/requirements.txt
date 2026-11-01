@@ -1,0 +1,1 @@
+aiogram==3.13.1\npyotp==2.9.0\ncryptography==43.0.3\nopencv-python-headless==4.10.0.84\nnumpy==2.1.2\n
