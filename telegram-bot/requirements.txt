@@ -1,1 +1,7 @@
-aiogram==3.13.1\npyotp==2.9.0\ncryptography==43.0.3\nopencv-python-headless==4.10.0.84\nnumpy==2.1.2\n
+aiogram==3.22.0
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+cryptography==44.0.3
+pyotp==2.9.0
+opencv-python-headless==4.11.0.86
+numpy==2.2.5
